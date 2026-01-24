@@ -7,7 +7,7 @@ from enum import Enum, auto
 import numpy as np
 import random
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta 
 
 class RouteObjective(Enum):
     TIME = auto()
