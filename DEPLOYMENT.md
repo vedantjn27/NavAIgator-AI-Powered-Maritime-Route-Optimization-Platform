@@ -228,3 +228,7 @@ For deployment issues:
 
 **NavAIgator** - Deployment Ready  
 *Intelligence That Knows the Way*
+
+Backend : https://navaigator.onrender.com
+
+Frontend : nav-ai-gator.vercel.app
