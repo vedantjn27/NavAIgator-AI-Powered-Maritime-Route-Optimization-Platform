@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { Header } from './header'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -142,29 +141,18 @@ export function RouteOptimizer() {
 
   if (!routeData) {
     return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        
-        {/* Background Image with Theme Support and Parallax */}
-        <div className="fixed inset-0 z-0 overflow-hidden">
+      <div className="min-h-screen bg-background relative">
+        {/* Background Image with Theme Support and Parallax - Fixed Position */}
+        <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
           {mounted && (
             <>
               <div 
-                className="absolute inset-0 transition-transform duration-75 ease-out"
+                className="absolute inset-0 transition-transform duration-75 ease-out will-change-transform bg-cover bg-center"
                 style={{ 
                   transform: `translateY(${scrollY * 0.3}px) scale(1.1)`,
+                  backgroundImage: 'url(/images/maritime-port.jpg)',
                 }}
-              >
-                <Image
-                  src="/images/maritime-port.jpg
-"
-                  alt="Maritime port background"
-                  fill
-                  className="object-cover transition-opacity duration-500"
-                  priority
-                  quality={90}
-                />
-              </div>
+              />
               <div className={`absolute inset-0 transition-opacity duration-500 ${
                 isDark 
                   ? 'bg-gradient-to-b from-black/70 via-black/50 to-black/70' 
@@ -173,6 +161,8 @@ export function RouteOptimizer() {
             </>
           )}
         </div>
+        
+        <Header />
         
         <main className="pt-20 max-w-7xl mx-auto px-6 py-12 relative z-10">
           <div className="mb-8">
@@ -228,28 +218,18 @@ export function RouteOptimizer() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
-      {/* Background Image with Theme Support and Parallax */}
-      <div className="fixed inset-0 z-0 overflow-hidden">
+    <div className="min-h-screen bg-background relative">
+      {/* Background Image with Theme Support and Parallax - Fixed Position */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         {mounted && (
           <>
             <div 
-              className="absolute inset-0 transition-transform duration-75 ease-out"
+              className="absolute inset-0 transition-transform duration-75 ease-out will-change-transform bg-cover bg-center"
               style={{ 
                 transform: `translateY(${scrollY * 0.3}px) scale(1.1)`,
+                backgroundImage: 'url(/maritime-port.jpg)',
               }}
-            >
-              <Image
-                src="/maritime-port.jpg"
-                alt="Maritime port background"
-                fill
-                className="object-cover transition-opacity duration-500"
-                priority
-                quality={90}
-              />
-            </div>
+            />
             <div className={`absolute inset-0 transition-opacity duration-500 ${
               isDark 
                 ? 'bg-gradient-to-b from-black/70 via-black/50 to-black/70' 
@@ -258,6 +238,8 @@ export function RouteOptimizer() {
           </>
         )}
       </div>
+      
+      <Header />
       
       <main className="pt-20 max-w-7xl mx-auto px-6 py-12 relative z-10">
         <div className="mb-8 flex items-center justify-between">
