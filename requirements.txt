@@ -1,0 +1,53 @@
+# ============================================================
+# NavAIgator - AI Powered Maritime Route Optimization Platform
+# Requirements File
+# ============================================================
+
+# -------------------------------------------------------
+# BACKEND — Python Dependencies (FastAPI + Genetic Engine)
+# Run: pip install -r requirements.txt (from /backend)
+# -------------------------------------------------------
+
+# Web Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# Data Validation
+pydantic==2.10.6
+
+# Numerical Computing (Genetic Algorithm Engine)
+numpy==2.2.3
+
+# CORS / HTTP Utilities
+httpx==0.28.1
+python-multipart==0.0.20
+
+# Optional: for local development / environment management
+python-dotenv==1.0.1
+
+# -------------------------------------------------------
+# SYSTEM REQUIREMENTS (Frontend — Node.js/npm ecosystem)
+# See /frontend/package.json for full JS dependencies
+# -------------------------------------------------------
+# Node.js       >= 18.0.0
+# npm           >= 9.0.0   (or yarn >= 1.22)
+#
+# Key Frontend Packages:
+#   next                    16.0.10
+#   react                   19.2.0
+#   typescript              ^5
+#   tailwindcss             ^4.1.9
+#   leaflet                 1.9.4
+#   recharts                2.15.4
+#   next-themes             ^0.4.6
+#   lucide-react            ^0.454.0
+#   @radix-ui/*             (various, see package.json)
+#   shadcn/ui               (via components.json)
+#   zod                     3.25.76
+#   react-hook-form         ^7.60.0
+# -------------------------------------------------------
+
+# -------------------------------------------------------
+# PYTHON VERSION
+# -------------------------------------------------------
+# Python >= 3.10 required
