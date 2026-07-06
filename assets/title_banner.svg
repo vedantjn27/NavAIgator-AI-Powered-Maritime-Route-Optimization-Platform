@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 110" width="900" height="110">
+  <defs>
+    <linearGradient id="titlegrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  style="stop-color:#38bdf8"/>
+      <stop offset="35%" style="stop-color:#2563eb"/>
+      <stop offset="65%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#38bdf8"/>
+    </linearGradient>
+    <filter id="titleglow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="110" fill="#0a1628"/>
+
+  <!-- Animated title text -->
+  <text x="450" y="66"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="56"
+        font-weight="900"
+        text-anchor="middle"
+        fill="url(#titlegrad)"
+        filter="url(#titleglow)"
+        letter-spacing="4">
+    NavAIgator
+    <animate attributeName="opacity" values="0;0;1" dur="1.5s" fill="freeze"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="92"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="13"
+        font-weight="400"
+        text-anchor="middle"
+        fill="#94a3b8"
+        letter-spacing="7">
+    AI · POWERED · MARITIME · ROUTE · OPTIMIZATION
+    <animate attributeName="opacity" values="0;0;0;1" dur="2s" fill="freeze"/>
+  </text>
+</svg>
